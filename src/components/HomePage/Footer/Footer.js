@@ -11,6 +11,7 @@ const Footer = () => {
 
     const onSubmit = data => {
         data.image = signedUser.photoURL;
+        data.designation = '';
 
         fetch('https://design-agency-server.herokuapp.com/addingFeedback', {
             method: 'POST',
@@ -34,8 +35,8 @@ const Footer = () => {
                 <div className="col-md-12 col-lg-12 col-xl-8 d-flex justify-content-center align-items-center feedback-form mt-5">
 
                     <form id="feedbackForm" onSubmit={handleSubmit(onSubmit)} >
-                        <input className='form-control' name="name" defaultValue = {signedUser.email} ref={register} placeholder="Your email address" /><br />
-                        <input className='form-control' name="designation" defaultValue = {signedUser.name} ref={register({ required: true })} placeholder="Your name / company's name" /><br />
+                        <input className='form-control' name="email" defaultValue = {signedUser.email} ref={register} placeholder="Your email address" /><br />
+                        <input className='form-control' name="name" defaultValue = {signedUser.name} ref={register({ required: true })} placeholder="Your name / company's name" /><br />
                         {errors.exampleRequired && <span>This field is required</span>}
 
                         <textarea className='form-control' name="description" ref={register({ required: true })} placeholder="Your message" /><br />

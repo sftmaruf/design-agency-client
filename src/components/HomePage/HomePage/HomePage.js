@@ -6,10 +6,11 @@ import Navbar from '../Navbar/Navbar';
 import OurWorks from '../OurWorks/OurWorks';
 import ProvidedServices from '../ProvidedServices/ProvidedServices';
 import SignificantClient from '../SignificantClient/SignificantClient';
+import './HomePage.css';
 
 const HomePage = () => {
     return (
-        <div>
+        <div className = "homepage-container">
             <div className = "header-container">
                 <Navbar></Navbar>
                 <HomePageHeader></HomePageHeader>
@@ -19,6 +20,20 @@ const HomePage = () => {
             <OurWorks></OurWorks>
             <Feedback></Feedback>
             <Footer></Footer>
+            <div className="row bg-column">
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,34 @@
+.side-panel{
+    /* border: 1px solid red; */
+    position: relative;
+    top: -30px;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 100%;
+ }
+.sidepanel-logo{
+    position: relative;
+    left: -25px;
+}
+ .sidepanel-logo img{
+    transform: scale(.3);
+}
+.sidepanel-option-alignment{
+    display: flex;
+    flex-direction: row;
+    min-width: 220px;
+}
+
+.sidepanel-option-alignment p{
+    color: black;
+    font-weight: 700;    
+    margin-left: 20px;  
+}
+
+.sidepanel-option-alignment p:hover{
+    color: #009444;
+}
+

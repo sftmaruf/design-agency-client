@@ -1,0 +1,33 @@
+.header-container{
+    min-height: 647px;
+    position: relative;
+    overflow: hidden;
+    /* bottom: 80px; */
+    /* border: 1px solid red; */
+}
+
+.header-container::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    min-height: 647px;
+    height: fit-content;
+    top: -20%;
+    left: -50%;
+    z-index: -1;
+    background: #FBD062;
+    transform: rotate(-2deg);
+}
+.header-text{
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
+.header-text h2{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-banner{
+    width: 524.6px;
+}

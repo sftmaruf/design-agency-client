@@ -1,0 +1,46 @@
+.carousel-images img{
+    width: 465.69px;
+    max-height: 334.7px;
+    overflow: hidden;
+}
+.button__bar {
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 40px;
+    width: auto;
+    text-align: center;
+  }
+  
+  .button__bar li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 3px;
+    padding: 0;
+  }
+  
+  .button__bar li button {
+    border: none;
+    background: #242A65;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 7.5px;
+  }
+  
+  .button__bar li.slick-active button {
+    background-color:#FBD062;
+  }
+  
+  .button__bar li button:hover
+  {
+    background:#FBD062;
+    outline: 0;
+  }
+
+  

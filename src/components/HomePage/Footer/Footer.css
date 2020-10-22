@@ -1,0 +1,27 @@
+.footer-container{
+    background-color:#FBD062;
+    min-height: 570px;
+    height: auto;
+}
+.footer-left{
+    padding: 50px;
+}
+.footer-left > h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+}
+.footer-left > p{
+    margin-top: 50px;
+}
+.feedback-form textarea{
+    width: 630px;
+    height: 277px;   
+}
+@media(max-width: 642px){
+    .feedback-form textarea{
+        width: auto;
+    }
+    .footer-left > h2{
+        word-wrap: break-word;
+    }
+}

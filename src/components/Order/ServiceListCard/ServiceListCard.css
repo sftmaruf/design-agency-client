@@ -1,0 +1,16 @@
+.servicelist-container{
+        width: 100%;
+}
+.servicelist-card{
+        min-width: 370px;
+        min-height: 212px;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 20px;
+}
+.servicelist-card .alert{
+        height: 30px;
+        width: 70px;
+        border-radius: 5px;
+        font-size: 14px;
+}

@@ -1,0 +1,14 @@
+.bg-column{
+    width: 100%;
+    height: 145rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.bg-column > .col-md-1{
+    max-width: 100px;
+    margin: 0 20px;
+    content: " ";
+    background-color: #707070;
+    opacity: 0.05;
+}

@@ -1,0 +1,29 @@
+.inputfile {
+	width: 0.1px;
+	height: 0.1px; 
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + .upload-label {
+    display: flex;
+    height: 40px;
+    width: 173px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: #009444;
+    border: 1px solid #009444;
+    border-radius: 5px;
+    background: #DEFFED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cloud-icon{
+    width: 20px;
+    margin-right: 5px;
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(80deg);
+}

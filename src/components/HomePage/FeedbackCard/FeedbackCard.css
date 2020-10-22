@@ -1,0 +1,13 @@
+.feedback-card{
+    width: 370px;
+    height: 212px;
+    background: transparent;
+    border: 1px solid #BFBFBF;
+    border-radius: 4px;
+}
+.main-title{
+    font-size: 20px;
+}
+.second-title{
+    font-size: 16px;
+}

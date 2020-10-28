@@ -1,8 +1,9 @@
 .servicelist-container{
         width: 100%;
+        margin-left: 2px;
 }
 .servicelist-card{
-        min-width: 370px;
+        min-width: 300px;
         min-height: 212px;
         height: auto;
         background: #FFFFFF;

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import Order from '../Order/Order';
 import './OrderForm.css';
@@ -12,8 +12,13 @@ const OrderForm = () => {
     const [signedUser] = useContext(signedUserContext);
     const { register, handleSubmit, errors } = useForm();
     const [selectedImage, setSelectedImage] = useState('');
+    const [activeCard, setActiveCard] = useState({});
     const [prompt, setPrompt] = useState(false);
-    const activeCard = extractSessionStorage('activecard');
+
+    useEffect(() => {
+        const activeCard = extractSessionStorage('activecard');
+        setActiveCard(activeCard || "");
+    }, []);
 
     const history = useHistory();
 
@@ -75,7 +80,7 @@ const OrderForm = () => {
     return (
         <Order title="Order">
             <div className="col-md-12 col-lg-12 col-xl-8 d-flex justify-content-center align-items-center feedback-form mt-5">
-                <form id='order-form' onSubmit={handleSubmit(onSubmit)}>
+                <form id='order-form' className = "order-form" onSubmit={handleSubmit(onSubmit)}>
                     <input className='form-control' name="name" defaultValue={signedUser.name} ref={register({ required: true })} placeholder="Your name/company's name" /><br />
                     <input className='form-control' name="email" defaultValue={signedUser.email} ref={register} placeholder="Your email address" /><br />
                     <input className='form-control' name="service" defaultValue={activeCard.name} ref={register} placeholder="Graphic Design" /><br />
@@ -88,7 +93,7 @@ const OrderForm = () => {
                             <input className='form-control' name="price" ref={register} placeholder="Price" /><br />
                         </div>
                         <div className="col-md-6">
-                            <input type="file" ref={register} name="file" id="file" class="inputfile" onChange={handleUploadImages} />
+                            <input type="file" ref={register} name="file" id="file" className="inputfile" onChange={handleUploadImages} />
                             <label className="upload-label" for="file"><img id="cloud-icon" src={cloudicon} alt="" /> {prompt ? 'Uploading...' : 'Upload Project File'}</label>
                         </div>
                     </div>

@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-/* .order-component{
-    display: flex;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
+.order-container{
     overflow: hidden;
-} */
+}
+
 @media(max-width: 906px){
     .volunteer-panel-container{
         padding: 20px 0;
@@ -15,12 +13,6 @@
 @media(max-width: 620px){
     .order-component{
         height: auto;
-    }
-
-    .customize-panel{
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
     }
 }
 

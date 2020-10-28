@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { signedUserContext } from '../../../App';
 import { signOut } from '../../LoginDesign/LoginMechanism/LoginMechanism';
+import { pushSessionStorage } from '../../Shared/SessionManagement/SessionManagement';
 import SidePanel from '../../Shared/SidePanel';
 import './Order.css';
 
@@ -8,7 +9,7 @@ const Order = (props) => {
     const [signedUser] = useContext(signedUserContext);
 
     return (
-        <div className='row'>
+        <div className='row order-container'>
             <SidePanel></SidePanel>
             <div className='volunteer-panel-container col-md-10 col-sm-12'>
                 <div className="upper-bezel">

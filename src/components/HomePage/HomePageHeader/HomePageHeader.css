@@ -2,10 +2,10 @@
     min-height: 647px;
     position: relative;
     overflow: hidden;
-    /* bottom: 80px; */
-    /* border: 1px solid red; */
 }
-
+.banner-text{
+    z-index: 1;
+}
 .header-container::before{
     content: "";
     position: absolute;

@@ -27,3 +27,9 @@
     margin-right: 5px;
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(80deg);
 }
+
+@media(max-width: 642px){
+    .order-form textarea{
+         width: 100%;
+    }
+}

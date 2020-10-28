@@ -9,9 +9,11 @@ const FeedbackCard = (props) => {
     return (
         <div className="col-sm-12 col-md-4 col-lg-3 card feedback-card m-3">
             <div className='row d-flex justify-content-start m-3'>
-                <img col-sm-4 src={image} className="rounded-circle" alt="..." />
-                <div className = "ml-3 col-sm-8">
-                    <h2 className = "main-title text-wrap"><strong>{name}</strong></h2>
+                <div className="col-sm-4" >
+                    <img src={image} className="rounded-circle" alt="..." />
+                </div>
+                <div className="col-sm-8">
+                    <h2 className="main-title text-wrap"><strong>{name}</strong></h2>
                     <h5 className="second-title"><strong>{designation}</strong></h5>
                 </div>
             </div>

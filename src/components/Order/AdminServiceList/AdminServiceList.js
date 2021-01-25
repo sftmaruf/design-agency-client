@@ -8,7 +8,7 @@ const AdminServiceList = () => {
     const [id, setID] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://design-agency-server.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(orderDetails => setOrderDetails(orderDetails));
     }, [])
@@ -19,7 +19,7 @@ const AdminServiceList = () => {
             state: options.value
         }
 
-        fetch('http://localhost:5000/updateOrderState', {
+        fetch('https://design-agency-server.herokuapp.com/updateOrderState', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

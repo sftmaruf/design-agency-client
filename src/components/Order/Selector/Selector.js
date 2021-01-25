@@ -1,37 +1,54 @@
-import React, { useState } from 'react';
-
+import { withTheme } from '@material-ui/core';
+import React from 'react';
 import Select from 'react-select';
 
-const Selector = (props) => {
 
-    const [index, setIndex] = useState(0);
-
+const Selector = ({ handleChangeState, orderDetails }) => {
+    const orderStateIndex = orderDetails.state;
     const options = [
-        { value: 'Pending', label: 'Pending'},
-        { value: 'Done', label: 'Done' },
-        { value: 'On going', label: 'On going' }
-    ]
-
-    const defaultValue = () => {
-        for (let i = 0; i < options.length; i++){
-            if (options === props.state) {
-                setIndex(i);
-            }
-        }
-    }
+        { value: '0', label: 'Pending', color: 'red' },
+        { value: '1', label: 'Done', color: 'green' },
+        { value: '2', label: 'On going', color: 'orange' }
+    ];
 
     const customStyles = {
-        minWidth: '150px'
-    }
+        option: (styles, { data, isSelected, isFocused }) => {
+            return {
+                ...styles,
+                backgroundColor: isSelected ? data.color
+                    : isFocused ? 'whitesmoke' : 'white',
+                color: isSelected ? 'white' :data.color
+            };
+        },
 
+        menu: (provided, state) => ({
+            ...provided,
+            width: state.selectProps.width,
+            borderBottom: '1px dotted pink',
+            color: options[orderStateIndex],
+            padding: 20,
+            border: "1px solid green"
+        }),
+
+        control: (_, { selectProps: { width } }) => ({
+            width: 'auto',
+            display: "flex",
+            border: `1px solid ${options[orderStateIndex].color}`
+        }),
+
+        singleValue: (styles, { data }) => ({
+            color:  data.color
+        })
+    }
 
     return (
         <div>
             <Select
                 options={options}
-                defaultValue = {options[index]}
+                defaultValue={options[orderStateIndex]}
                 styles={customStyles}
-                onChange = {props.handleChangeState}
+                width="200px"
+                onChange={handleChangeState}
             />
         </div>
     );
